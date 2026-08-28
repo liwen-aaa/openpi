@@ -1,0 +1,19 @@
+{
+  "_": "机制包的项目侧配置（来自 work-flow 机制模型）。install = 装了哪些；options = 每包在本项目的参数。判据本体不在这里改——要改就改包，走上游。",
+  "install": ["append-only-ledger", "wired-check"],
+  "options": {
+    "append-only-ledger": {
+      "as": "OP-台账",
+      "file": "docs/disciplines.md",
+      "idPattern": "^\\| (OP-(\\d+)) \\|",
+      "sectionPrefix": "## "
+    },
+    "wired-check": {
+      "as": "OP-20",
+      "file": "docs/disciplines.md",
+      "idPattern": "^\\| (OP-\\d+) \\|",
+      "commandPattern": "bun run ([\\w:-]+)",
+      "autoHooks": ["check", "test"]
+    }
+  }
+}
